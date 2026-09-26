@@ -1,5 +1,7 @@
 # YT Float
 
+![YT Float: YouTube floating over a code editor](docs/social-preview.png)
+
 YouTube in a small, frameless, always-on-top window for macOS. It floats over everything (including full-screen apps and every Space), stays signed in to your own account, and gets out of the way when you're not touching it.
 
 Built with Electron and plain JavaScript. There's no frontend framework, no tracking and no updater.
@@ -14,6 +16,14 @@ Built with Electron and plain JavaScript. There's no frontend framework, no trac
 - **Adjustable opacity:** from 40% to 100%.
 - **Menu bar app:** tray icon with all the controls. The Dock icon is hidden by default (optional).
 - **Stays signed in:** persistent session, so you sign in once.
+
+## Screenshots
+
+| Normal | Compact mode (⌥⌘C) with the hover drag bar |
+|---|---|
+| ![Normal mode](docs/screenshot-normal.png) | ![Compact mode](docs/screenshot-compact.png) |
+
+<sub>Video: *Big Buck Bunny* © Blender Foundation, CC BY 3.0.</sub>
 
 ## Keyboard shortcuts
 
