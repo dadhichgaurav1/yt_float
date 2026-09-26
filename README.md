@@ -74,6 +74,12 @@ Run in development:
 npm start
 ```
 
+Or create a double-clickable dev launcher, `~/Applications/YT Float (Dev).app`. It shows up in Spotlight and can be kept in the Dock. Each click quits any running YT Float and starts this checkout's source, logging to `/tmp/yt-float-dev.log`:
+
+```bash
+npm run make-launcher
+```
+
 Build a standalone app:
 
 ```bash

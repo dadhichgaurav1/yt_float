@@ -14,7 +14,8 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --mac dir",
-    "build:universal": "electron-builder --mac dir --universal"
+    "build:universal": "electron-builder --mac dir --universal",
+    "make-launcher": "bash scripts/make-dev-launcher.sh"
   },
   "build": {
     "appId": "local.ytfloat",
