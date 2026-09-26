@@ -1,0 +1,41 @@
+{
+  "name": "yt-float",
+  "productName": "YT Float",
+  "version": "1.0.0",
+  "description": "YouTube in a floating, always-on-top window",
+  "author": "Gaurav Dadhich",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadhichgaurav1/yt_float.git"
+  },
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac dir"
+  },
+  "build": {
+    "appId": "local.ytfloat",
+    "productName": "YT Float",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "mac": {
+      "category": "public.app-category.video",
+      "identity": null,
+      "icon": "build/icon.png"
+    },
+    "afterPack": "build/adhoc-sign.js"
+  },
+  "devDependencies": {
+    "electron": "^44.4.5",
+    "electron-builder": "^26.15.3"
+  }
+}
