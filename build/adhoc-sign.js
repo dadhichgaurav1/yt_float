@@ -7,6 +7,8 @@ const os = require('os');
 const path = require('path');
 
 exports.default = async function (context) {
+  // Universal builds pack each arch into a *-temp dir first; sign only the merged app.
+  if (context.appOutDir.endsWith('-temp')) return;
   const name = `${context.packager.appInfo.productFilename}.app`;
   const app = path.join(context.appOutDir, name);
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'ytfloat-sign-'));

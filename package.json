@@ -13,7 +13,8 @@
   "private": true,
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --mac dir"
+    "build": "electron-builder --mac dir",
+    "build:universal": "electron-builder --mac dir --universal"
   },
   "build": {
     "appId": "local.ytfloat",

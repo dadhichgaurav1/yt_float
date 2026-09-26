@@ -44,7 +44,21 @@ Show/Hide · Compact Mode · Always on Top · Lock 16:9 Aspect Ratio · Show Doc
 
 Close (in the drag bar) hides the window to the menu bar. Use **Quit** to exit.
 
-## Install
+## Download
+
+Grab `YT-Float-<version>-mac-universal.zip` from the [latest release](https://github.com/dadhichgaurav1/yt_float/releases/latest). It runs on Apple Silicon and Intel Macs.
+
+1. Unzip it and move `YT Float.app` into Applications.
+2. Open it. macOS blocks the first launch, because the app is not notarized by Apple.
+3. Go to **System Settings → Privacy & Security**, scroll down, and click **Open Anyway** next to the YT Float message. You only need to do this once.
+
+If you prefer the terminal, this does the same thing:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/YT Float.app"
+```
+
+## Build from source
 
 Requires macOS and Node.js 18+.
 
@@ -66,7 +80,7 @@ Build a standalone app:
 npm run build
 ```
 
-This produces `dist/mac-<arch>/YT Float.app`. The build is ad-hoc signed, so no Apple Developer account is needed, and Apple Silicon Macs won't report it as "damaged". Copy it into Applications:
+This produces `dist/mac-<arch>/YT Float.app` for your Mac's architecture (`npm run build:universal` builds one that runs on both). The build is ad-hoc signed, so no Apple Developer account is needed, and Apple Silicon Macs won't report it as "damaged". Copy it into Applications:
 
 ```bash
 ditto --noextattr "dist/mac-arm64/YT Float.app" "/Applications/YT Float.app"
